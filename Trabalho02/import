@@ -1,0 +1,11 @@
+curl -d '{"id_categoria": "1", "tituloCategoria": "Categoria01","descricaoCategoria": "Descricao", "fg_ativo" : "1"}' -H "Content-Type: application/json" -X POST http://localhost:5000/addcategoria
+
+curl -d '{"id_fornecedor" : "1", "cnpj" : "12.345.678/0001-00", "razaoSocial" : "Dell", "telefone" : "(12)3456-7890", "endereco" : "Endereco, 01", "contato" : "Contato", "fg_ativo" : "1"}' -H "Content-Type: application/json" -X POST http://localhost:5000/addfornecedor
+
+curl -d '{"id_vendedor": "1", "cpf": "123.456.789-00","nome": "Vendedor01", "carteiraTrabalho" : "00001", "dataAdmissao" : "15/03/2019", "fg_ativo" : "1"}' -H "Content-Type: application/json" -X POST http://localhost:5000/addvendedor
+
+curl -d '{"id_produto" : "1", "id_fornecedor" : "1", "id_categoria" : "1", "nomeProduto" : "Notebook", "descricaoProduto" : "Descricao", "valorUnitario" : "2490.00", "quantidade" : "20", "quantidadeMinima" : "5", "fg_ativo" : "1"}' -H "Content-Type: application/json" -X POST http://localhost:5000/addproduto
+
+curl -d '{"id_compra" : "1", "id_fornecedor" : "1", "id_produto" : "1", "id_categoria" : "1", "dataCompra" : "17/12/2018", "valorTotal" : "44820.00", "quantidade" : "30", "fg_ativo" : "1"}' -H "Content-Type: application/json" -X POST http://localhost:5000/addcompra
+
+curl -d '{"id_venda" : "1", "id_vendedor" : "1", "id_categoria" : "1", "id_produto" : "1", "dataVenda" : "23/12/2018", "valorTotal" : "2490.00", "quantidade" : "1", "fg_ativo" : "1"}' -H "Content-Type: application/json" -X POST http://localhost:5000/addvenda
